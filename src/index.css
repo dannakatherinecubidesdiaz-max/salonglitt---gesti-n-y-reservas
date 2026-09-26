@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Quicksand', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #120B1C;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Y2K Custom Utilities */
+.y2k-glow-pink {
+  box-shadow: 0 0 20px rgba(255, 112, 166, 0.4);
+}
+
+.y2k-glow-cyan {
+  box-shadow: 0 0 20px rgba(112, 214, 255, 0.4);
+}
+
+.y2k-glow-yellow {
+  box-shadow: 0 0 20px rgba(255, 214, 112, 0.4);
+}
+
+.y2k-card-bubble {
+  background: radial-gradient(130% 130% at 15% 10%, #2A1B45 0%, #1E1332 100%);
+  border: 1.5px solid rgba(255, 112, 166, 0.3);
+  border-radius: 24px;
+}
+
+.y2k-card-bubble:hover {
+  border-color: rgba(255, 112, 166, 0.6);
+}
+
+.y2k-pill-pink {
+  background: linear-gradient(135deg, #FF70A6 0%, #FF4D8B 100%);
+  box-shadow: 0 4px 15px rgba(255, 112, 166, 0.4);
+}
+
+.y2k-pill-cyan {
+  background: linear-gradient(135deg, #70D6FF 0%, #38B6FF 100%);
+  box-shadow: 0 4px 15px rgba(112, 214, 255, 0.4);
+}
+
+/* Custom animated sparkle */
+@keyframes y2k-twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.85) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.15) rotate(15deg); }
+}
+
+.animate-twinkle {
+  animation: y2k-twinkle 3s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #120B1C;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A1B45;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 112, 166, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF70A6;
+}

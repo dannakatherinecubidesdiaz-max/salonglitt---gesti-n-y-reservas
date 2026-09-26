@@ -1,0 +1,6 @@
+{
+  "name": "SalonGlitt - Gestión y Reservas",
+  "description": "Sistema completo de gestión y reservas para salón de belleza con estética Y2K, agenda multiestilista y reglas de negocio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
