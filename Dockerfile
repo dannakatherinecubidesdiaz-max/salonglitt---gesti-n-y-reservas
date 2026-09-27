@@ -7,7 +7,7 @@ RUN bun install --frozen-lockfile
 COPY . .
 ARG VITE_SUPABASE_URL
 ARG VITE_SUPABASE_ANON_KEY
-RUN bun run build
+RUN test -n "$VITE_SUPABASE_URL" && test -n "$VITE_SUPABASE_ANON_KEY" && bun run build
 
 FROM nginxinc/nginx-unprivileged:stable-alpine AS runtime
 COPY --from=build --chown=nginx:nginx /app/dist /usr/share/nginx/html
